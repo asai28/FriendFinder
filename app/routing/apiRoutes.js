@@ -7,19 +7,20 @@ app.get("/api/friends", function(req, res){
 });
 
 app.post("/api/friends", function(req, res){
-    var scores = [];
-    var minScoreIndex = 0;
+    var total_diff = [];
+    var minDiffIndex = 0;
     for(var i = 0; i < friends.length; ++i){
-        var score = 0;
+        var diff = 0;
         for(var j = 0; j < friends[i].scores.length; ++j){
-            score += friends[i].scores[j];
+            diff += Math.abs(parseInt(req.body.scores[j]) - parseInt(friends[i].scores[j]));
         }
-        scores.push(score);
-        if(score < scores[minScoreIndex]){
-            minScoreIndex = scores.length - 1;
+        total_diff.push(diff);
+        if(diff < total_diff[minDiffIndex]){
+            minDiffIndex = total_diff.length - 1;
         }
     }
     friends.push(req.body);
+    res.send(friends[minDiffIndex]);
 });
 
 }
