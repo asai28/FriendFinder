@@ -1,0 +1,27 @@
+{
+  "name": "FriendFinder",
+  "version": "1.0.0",
+  "description": "FriendFinder\r     - .gitignore\r     - app\r       - data\r         - friends.js\r       - public\r         - home.html\r         - survey.html\r       - routing\r         - apiRoutes.js\r         - htmlRoutes.js\r     - node_modules\r     - package.json\r     - server.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asai28/FriendFinder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asai28/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/asai28/FriendFinder#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "nodemon": "^1.18.3",
+    "path": "^0.12.7"
+  }
+}
